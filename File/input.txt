@@ -1,0 +1,5 @@
+Hello jii, kaise hai aap? This a demo file for reading purpose by using java I/o. 
+Thank you for reading this file. Have a nice day. Bye bye. Take care. See you soon. 
+
+Q10 (Question not cleared), 
+Q11, Q14, Q15, Q18, Q21, Q22, Q23 (Topic not cleared)
