@@ -1,42 +1,34 @@
-// doubt in this question: concept of interface when two interfaces have unique methods and same data members
-interface Shape2 {
-    double calculateArea();
-    void display();
+interface detail {
+    String showDetail();
 }
-
-interface Color {
-    String getColor();
-    void display();
+interface marks {
+    int total_Marks();
 }
-
-class Circle2 implements Shape2, Color {
-    private double radius;
-    private String color;
-
-    public Circle2(double radius, String color) {
-        this.radius = radius;
-        this.color = color;
+class student implements detail,marks {
+    private String name;
+    private int num1;
+    private int num2;
+    public student(String name, int num1, int num2) {
+        this.name = name;
+        this.num1 = num1;
+        this.num2 = num2;
+    }
+    public String showDetail() {
+        System.out.println("Detail: ");
+        System.out.println("Name: " + name);
+        System.out.println("Marks: " + "\t" + num1 + "\t" + num2);
+        return null;
+    }
+    public int total_Marks() {
+        System.out.println(num1+num2);
+        return 0;
     }
 
-    public double calculateArea() {
-        return Math.PI * radius * radius;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void display() {
-        System.out.println("Circle: ");
-        System.out.println("Radius: " + radius);
-        System.out.println("Area: " + calculateArea());
-        System.out.println("Color: " + getColor());
-    }
 }
-
 public class Q10 {
     public static void main(String[] args) {
-        Circle2 circle = new Circle2(5.0, "Red");
-        circle.display();
+        student stu = new student("Himanshu",100,100);
+        stu.showDetail();
+        stu.total_Marks();
     }
 }
